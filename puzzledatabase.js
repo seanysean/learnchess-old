@@ -8,7 +8,12 @@ var puzzleNames = ["completely won","beginner 001","beginner 002","beginner 003"
                    "the long way around","snafu","acid","green light","fair trade","solitude","petrov's defense gone wrong",
                    "domination"];
 var candidateName = prompt("Enter puzzle name");
-for(i = 0; i<puzzleNames.length;i++) {
-  if (candidateName = puzzleNames[i]) alert("Same");
-  else alert("Not same");
+var i = 0;
+for(i; i < puzzleNames.length; i++) {
+}
+if (candidateName.toLowerCase() = puzzleNames[i]) {
+  alert("Same");
+}
+else {
+  alert("Not same");
 }
