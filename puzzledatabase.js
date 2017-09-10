@@ -10,11 +10,14 @@ var puzzleNames = ["completely won","beginner 001","beginner 002","beginner 003"
 var candidateName = prompt("Enter puzzle name");
 var output = document.getElementById("output");
 for(i = 0; i < puzzleNames.length; i++) {
-  if (candidateName.toLowerCase() === puzzleNames[i]) {
+  console.log("i is " + i);
+  console.log("Make sure puzzleNames is fine: " + puzzleNames[i]);
+  if (puzzleNames[i] === candidateName.toLowerCase()) {
     output.innerHTML = `<a href="https://learnchess.neocities.org/puzzles/${i + 1}.html">Duplicate found</a>`;
   }
   else {
     output.innerHTML = "No puzzle found with that name";
+    console.log("Candidate " + candidateName);
   }
 }
 
