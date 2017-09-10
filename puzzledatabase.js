@@ -8,12 +8,13 @@ var puzzleNames = ["completely won","beginner 001","beginner 002","beginner 003"
                    "the long way around","snafu","acid","green light","fair trade","solitude","petrov's defense gone wrong",
                    "domination"];
 var candidateName = prompt("Enter puzzle name");
-var i = 0;
-for(i; i < puzzleNames.length; i++) {
+var output = document.getElementById("output");
+for(i = 0; i < puzzleNames.length; i++) {
+  if (candidateName.toLowerCase() === puzzleNames[i]) {
+    output.innerHTML = `<a href="https://learnchess.neocities.org/puzzles/${i + 1}.html">Duplicate found</a>`;
+  }
+  else {
+    output.innerHTML = "No puzzle found with that name";
+  }
 }
-if (candidateName.toLowerCase() = puzzleNames[i]) {
-  alert("Same");
-}
-else {
-  alert("Not same");
-}
+
