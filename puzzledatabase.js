@@ -14,7 +14,7 @@ for(i = 0; i < puzzleNames.length; i++) {
   console.log("i is " + i);
   console.log("Make sure puzzleNames is fine: " + puzzleNames[i]);
   if (puzzleNames[i] === candidateName.toLowerCase()) {
-    output.innerHTML = `<a href="https://learnchess.neocities.org/puzzles/${i + 1}.html">Duplicate found</a>`;
+    output.innerHTML = `<a target="_blank" href="https://learnchess.neocities.org/puzzles/${i + 1}.html">Duplicate found</a>`;
     looping = false;
   }
   else if (looping) {
