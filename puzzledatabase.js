@@ -15,6 +15,9 @@ for(i = 0; i < puzzleNames.length; i++) {
   if (puzzleNames[i] !== /^[a-z]$/) {
     alert(werking + puzzleNames[i];
   }
+  else {
+    console.log(/^[a-z]$/);
+  }
   console.log("i is " + i);
   console.log("Make sure puzzleNames is fine: " + puzzleNames[i]);
   if (puzzleNames[i] === candidateName.toLowerCase()) {
