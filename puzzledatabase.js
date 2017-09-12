@@ -13,7 +13,7 @@ var looping = true;
 var distant;
 for(i = 0; i < puzzleNames.length; i++) {
   if (puzzleNames[i] !== /^[a-z]$/) {
-    alert(werking + puzzleNames[i];
+    alert(werking + puzzleNames[i]);
   }
   else {
     console.log(/^[a-z]$/);
