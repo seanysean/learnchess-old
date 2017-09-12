@@ -12,8 +12,15 @@ var output = document.getElementById("output");
 var looping = true;
 var distant;
 for(i = 0; i < puzzleNames.length; i++) {
-  if (puzzleNames[i] !== /^[a-z]$/) {
-    alert("working" + puzzleNames[i]);
+  distant = puzzleNames[i].split("");
+  if (puzzleNames[i] !== puzzleNames[i].match(/[a-z]/g)) {
+    console.log(1);
+    for(j = 0; j < distant.length; j++) {
+      if(distant[j] !== distant[j].match(/[a-z]/g) {
+         distant[j].replace(/[^a-z]/g,"");
+         alert("distant");
+      }
+    }
   }
   else {
     console.log(/^[a-z]$/);
