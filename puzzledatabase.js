@@ -18,7 +18,7 @@ for(i = 0; i < puzzleNames.length; i++) {
     for(j = 0; j < distant.length; j++) {
       if(distant[j] !== distant[j].match(/[a-z]/g)) {
          distant[j].replace(/[^a-z]/g,"");
-         alert("distant");
+         console.log(distant);
       }
     }
   }
