@@ -24,7 +24,7 @@ for(i = 0; i < puzzleNames.length; i++) {
     output.innerHTML = `<a target="_blank" href="https://learnchess.neocities.org/puzzles/${i + 1}.html">Duplicate found</a>`;
     looping = false;
   }
-  else if(candidateName === 
+  //else if(candidateName === 
   else if (looping) {
     output.innerHTML = "No puzzle found with that name";
     console.log("Candidate " + candidateName);
