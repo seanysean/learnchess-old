@@ -15,7 +15,7 @@ var distant;
 for(i = 0; i < puzzleNames.length; i++) {
   distant = puzzleNames[i].split("");
   smashedName = candidateName;
-  console.log("smashed" + smashedName);
+  
   if (puzzleNames[i] !== puzzleNames[i].match(/[a-z]/g)) {
     console.log(1);
     for(j = 0; j < distant.length; j++) {
@@ -26,11 +26,13 @@ for(i = 0; i < puzzleNames.length; i++) {
     }
   };
   for(l = 0; l < smashedName.length; l++) {
-    smashedName.replace(/[^a-z]/g,"");
+    smashedName = smashedName.replace(/[^a-z]/g,"");
   }
   console.log("i is " + i);
   console.log("Make sure puzzleNames is fine: " + puzzleNames[i]);
   distant.join("");
+  console.log("smashed " + smashedName);
+  console.log("distant " + distant);
   if (puzzleNames[i] === candidateName.toLowerCase()) {
     output.innerHTML = `<a target="_blank" href="https://learnchess.neocities.org/puzzles/${i + 1}.html">Duplicate found</a>`;
     looping = false;
