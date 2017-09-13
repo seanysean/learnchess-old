@@ -30,7 +30,7 @@ for(i = 0; i < puzzleNames.length; i++) {
   }
   console.log("i is " + i);
   console.log("Make sure puzzleNames is fine: " + puzzleNames[i]);
-  distant.join("");
+  distant = distant.join("");
   console.log("smashed " + smashedName);
   console.log("distant " + distant);
   if (puzzleNames[i] === candidateName.toLowerCase()) {
