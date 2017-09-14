@@ -26,7 +26,7 @@ for(i = 0; i < puzzleNames.length; i++) {
     }
   };
   for(l = 0; l < smashedName.length; l++) {
-    smashedName = smashedName.replace(/[^a-z]/g,"");
+    smashedName = smashedName.replace(/[^a-zA-Z]/g,"");
   }
   console.log("i is " + i);
   console.log("Make sure puzzleNames is fine: " + puzzleNames[i]);
