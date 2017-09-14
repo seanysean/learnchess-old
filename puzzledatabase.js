@@ -7,34 +7,15 @@ var puzzleNames = ["completely won","beginner 001","beginner 002","beginner 003"
                    "doomsday","r.i.p.","thank you, bishop on b2!","scorpion","true chess vi","crusher","do no harm",
                    "the long way around","snafu","acid","green light","fair trade","solitude","petrov's defense gone wrong",
                    "domination"];
-var candidateName = prompt("Enter puzzle name");
-var smashedName;
+var candidateName = prompt("Enter puzzle name").toLowerCase();
+var smashedName, distant;
 var output = document.getElementById("output");
 var looping = true;
-var distant;
 for(i = 0; i < puzzleNames.length; i++) {
-  distant = puzzleNames[i].split("");
-  smashedName = candidateName;
-  
-  if (puzzleNames[i] !== puzzleNames[i].match(/[a-z]/g)) {
-    console.log(1);
-    for(j = 0; j < distant.length; j++) {
-      if(distant[j] !== distant[j].match(/[a-z]/g)) {
-         distant[j] = distant[j].replace(/[^a-z]/g,"");
-         console.log(distant);
-      }
-    }
-  };
-  for(l = 0; l < smashedName.length; l++) {
-    smashedName = smashedName.replace(/[^a-zA-Z]/g,"");
-    smashedName.toLowerCase();
-  }
-  console.log("i is " + i);
-  console.log("Make sure puzzleNames is fine: " + puzzleNames[i]);
-  distant = distant.join("");
-  console.log("smashed " + smashedName);
-  console.log("distant " + distant);
-  if (puzzleNames[i] === candidateName.toLowerCase()) {
+  distant = puzzleNames[i].replace(/[^a-z]/g,"");
+  smashedName = candidateName.replace(/[^a-zA-Z]/g,"");
+  console.log(distant);
+  if (puzzleNames[i] === candidateName) {
     output.innerHTML = `<a target="_blank" href="https://learnchess.neocities.org/puzzles/${i + 1}.html">Duplicate found</a>`;
     looping = false;
   }
@@ -47,4 +28,3 @@ for(i = 0; i < puzzleNames.length; i++) {
     console.log("Candidate " + candidateName);
   }
 }
-
