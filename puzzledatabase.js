@@ -6,7 +6,7 @@ var puzzleNames = ["completely won","beginner 001","beginner 002","beginner 003"
                    "the drop of the atomic bomb","two pawns on the sixth or seventh rank beat a rook--not","boom!!",
                    "doomsday","r.i.p.","thank you, bishop on b2!","scorpion","true chess vi","crusher","do no harm",
                    "the long way around","snafu","acid","green light","fair trade","solitude","petrov's defense gone wrong",
-                   "domination"];
+                   "domination","the battery explodes"];
 var candidateName = prompt("Enter puzzle name").toLowerCase();
 var smashedName, distant;
 var output = document.getElementById("output");
