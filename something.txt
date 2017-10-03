@@ -1,0 +1,113 @@
+css--
+body {
+  background: #333;
+  font-family: "Trebuchet MS",sans-serif;
+  color: #eee;
+}
+a {
+  color: #1A71A7;
+  text-decoration: none;
+  transition: 0.25s linear;
+}
+a:hover {
+  color: #369;
+  text-decoration: underline;
+}
+.container {
+  border: 1px solid #444;
+  width: 60%;
+  margin: auto;
+}
+.container h1 {
+  border-bottom: 1px solid #888;
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+}
+.center {
+  text-align: center;
+}
+.contributor {
+  width: 300px;
+  margin: 30px auto;
+}
+.contributor p {
+  transition: 0.25s ease;
+  padding: 5px;
+  position: relative;
+  top: -17px;
+}
+.contributor > a:first-child {
+  font-size: 25px;
+  color: #ccc;
+  text-align: center;
+}
+.contributor > a:first-child::after {
+  content: "";
+  background: #369;
+  width: 0;
+  height: 3px;
+  margin: auto;
+  transition: 0.25s linear;
+}
+.contributor > a:first-child:hover {
+  text-decoration: none;
+  background: #369;
+  color: #fff;
+}
+.contributor > a:first-child:hover + p {
+  background: #369;
+}
+.contributor > a:first-child:hover + p a {
+  color: #fff;
+}
+.contributor > a:first-child:hover::after {
+  width: 100%;
+}
+.contribute {
+  padding: 10px;
+  display: block;
+  width: 100px;
+  text-align: center;
+  margin: 20px auto;
+  transition: 0.10s linear;
+}
+.contribute:hover {
+  background: #444;
+  text-decoration: underline;
+  color: #37a;
+}
+@media (max-width: 650px) {
+  .container {
+    width: 90%;
+  }
+  .contributor {
+    width: 80%;
+  }
+}
+html--
+<div class="container">
+  <h1 class="center">Thanks</h1>
+  <p class="center">Thank you to the various people who have contributed to <a href="/" target="_blank">LearnChess</a>!</p>
+  <div class="contributor">
+    <a href="#">AR</a>
+    <p>Contributed <a href="#">game analysis</a>, <a href="#">puzzles</a>, and <a href="#">articles</a>.</p>
+  </div>
+  <div class="contributor">
+    <a href="#">TN</a>
+    <p>Contributed <a href="#">game analysis</a>, <a href="#">puzzles</a>, and <a href="#">articles</a>.</p>
+  </div>
+  <div class="contributor">
+    <a href="#">ND</a>
+    <p>Contributed <a href="#">game analysis</a>, <a href="#">puzzles</a>, images, and <a href="#">articles</a>.</p>
+  </div>
+  <div class="contributor">
+    <a href="#">WP</a>
+    <p>Contributed <a href="#">puzzles</a>.</p>
+  </div>
+  <div class="contributor">
+    <a href="#">ME</a>
+    <p>Contributed <href="#">game analysis</a>, <a href="#">puzzles</a>, code, <a href="#">videos</a>, and <a href="#">articles</a>. Also a comment moderator.</p>
+  </div>
+  <a href="#" class="contribute">Contribute</a>
+</div>
